@@ -22,6 +22,6 @@ public class ErpApplication{
         ConfigurableApplicationContext context = SpringApplication.run(ErpApplication.class, args);
         Environment environment = context.getBean(Environment.class);
         System.out.println("启动成功，访问地址：http://" + ComputerInfo.getIpAddr() + ":"
-                + environment.getProperty("server.port") + "，测试用户：jsh，密码：123456");
+                + environment.getProperty("server.port") + "，测试用户：wdy，密码：123456");
     }
 }

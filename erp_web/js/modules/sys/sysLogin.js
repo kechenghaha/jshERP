@@ -86,11 +86,13 @@ function loginFun() {
                     if (loginInfoTip.indexOf("user is not exist") != -1) {
                         $("#loginName").val("").focus();
                         $("#password").val("");
-                        alert("用户名不存在");
+                        //alert("用户名不存在");
+						$("#id").text("用户名不存在");
                         return;
                     }
                     else if (loginInfoTip.indexOf("user password error") != -1) {
-                        alert("密码错误");
+                        //alert("密码错误");
+						$("#id").text("密码错误");
                         return;
                     }
                     else if (loginInfoTip.indexOf("access service error") != -1) {

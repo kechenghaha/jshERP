@@ -4,7 +4,13 @@
  * @version 2019-09-14
  */
 .login-page {
-    background: #e3e7ec
+    /*background-image: url("/images/bg/10.png");
+	background-repeat: no-repeat;
+	background-size: cover;*/
+	background-image: url("/images/bg/9.png") ;
+	background-repeat: no-repeat;
+	background-size: cover; 
+	opacity: 0.85;
 }
 
 .login-page .login-box {
@@ -20,7 +26,7 @@
 }
 
 .login-page .login-box-body {
-    width: 360px;
+    width: 460px;
     margin: auto;
     padding: 28px;
     background: #fff;
@@ -84,4 +90,10 @@
 
 .login-page .login-copyright, .login-page .login-copyright a {
     color: #666
+}
+.show-tips{
+	font-size: 15px;
+	font-family: cursive;
+    color: red;
+    font-weight: 400;
 }
