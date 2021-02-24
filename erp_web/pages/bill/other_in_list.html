@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>其它入库</title>
+    <title>整机入库</title>
     <meta charset="utf-8">
     <!-- 指定以IE8的方式来渲染 -->
     <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8"/>
@@ -24,7 +24,7 @@
 </head>
 <body>
 <!-- 数据显示table -->
-<div id="tablePanel" class="easyui-panel" data-options="fit:true" style="padding:5px;" title="其它入库列表" iconCls="icon-list">
+<div id="tablePanel" class="easyui-panel" data-options="fit:true" style="padding:5px;" title="整机入库列表" iconCls="icon-list">
     <div class="box-body form-inline">
         <div class="form-group">
             <label class="control-label">单据编号：</label>
@@ -58,7 +58,7 @@
     <form id="depotHeadFM" method="post" novalidate>
         <table width="100%" style="min-width:1100px;">
             <tr>
-                <td style="width:70px;">供应商</td>
+                <!--<td style="width:70px;">供应商</td>
                 <td style="padding:5px;width:170px;">
                     <div class="org-list">
                         <input id="OrganId" name="OrganId" style="width:130px;"/>
@@ -67,7 +67,7 @@
                         <img id="addOrgan" src="/js/easyui/themes/icons/edit_add.png"
                              style="cursor: pointer;" alt="增加供应商" title="增加供应商"/>
                     </div>
-                </td>
+                </td>-->
                 <td style="width:70px;">单据日期</td>
                 <td style="padding:5px">
                     <input type="text" name="OperTime" id="OperTime"
@@ -108,10 +108,10 @@
      closed="true" buttons="#dlg-buttons-show" modal="true" cache="false" collapsible="false" closable="true">
     <table width="100%" style="min-width:1100px;">
         <tr>
-            <td style="width:60px;">供应商：</td>
+            <!--<td style="width:60px;">供应商：</td>&ndash;&gt;
             <td style="padding:5px;width:130px;">
                 <span id="OrganIdShow"></span>
-            </td>
+            </td>-->
             <td style="width:70px;">单据日期：</td>
             <td style="padding:5px;width:130px;">
                 <span id="OperTimeShow"></span>
@@ -203,9 +203,9 @@
         $("#tablePanel").panel({width:webW-2});
         var supUrl = "/supplier/findBySelect_sup"; //供应商接口
         listType = "入库";
-        listSubType = "其它";
+        listSubType = "整机";
         organUrl = supUrl;
-        amountNum = "QTRK";
+        amountNum = "ZJRK";
     }
     //初始化表格数据
     function initTableData(){
@@ -258,7 +258,7 @@
                         return str;
                     }
                 },
-                { title: '供应商名称', field: 'organName',width:120},
+                /*{ title: '供应商名称', field: 'organName',width:120},*/
                 { title: '单据编号',field: 'number',width:155, formatter:function (value,rec) {
                         if(rec.linknumber) {
                             return value + "[转]";
@@ -267,7 +267,7 @@
                         }
                     }
                 },
-                { title: '商品信息',field: 'materialsList',width:200,formatter:function(value){
+                { title: '商品信息',field: 'materialsList',width:350,formatter:function(value){
                         if(value) {
                             return value.replace(",","，");
                         }
@@ -556,9 +556,9 @@
                 },
                 { title: '名称', field: 'name', editor: 'validatebox', width: 100},
                 { title: '规格', field: 'standard', editor: 'validatebox', width: 60},
-                { title: '型号', field: 'model', editor: 'validatebox', width: 60},
+                { title: '型号', field: 'model', editor: 'validatebox', width: 80},
                 { title: '扩展信息', field: 'materialOther', editor: 'validatebox', width: 70},
-                { title: '库存',field: 'Stock',editor:'validatebox',width:50},
+                { title: '库存',field: 'Stock',editor:'validatebox',width:60},
                 { title: '单位',field: 'Unit',editor:'validatebox',width:60},
                 { title: '数量',field: 'OperNumber',editor:'validatebox',width:60},
                 { title: '单价',field: 'UnitPrice',editor:'validatebox',width:60},
@@ -660,9 +660,9 @@
                 { title: '条码',field: 'barCode', editor:'validatebox', width:120},
                 { title: '名称', field: 'name', editor: 'validatebox', width: 100},
                 { title: '规格', field: 'standard', editor: 'validatebox', width: 60},
-                { title: '型号', field: 'model', editor: 'validatebox', width: 60},
+                { title: '型号', field: 'model', editor: 'validatebox', width: 80},
                 { title: '扩展信息', field: 'materialOther', editor: 'validatebox', width: 70},
-                { title: '库存',field: 'Stock',width:50},
+                { title: '库存',field: 'Stock',width:60},
                 { title: '单位',field: 'Unit',editor:'validatebox',width:60},
                 { title: '数量',field: 'OperNumber',editor:'validatebox',width:60},
                 { title: '单价',field: 'UnitPrice',editor:'validatebox',width:60},

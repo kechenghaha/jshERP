@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>其它出库</title>
+    <title>领料出库</title>
     <meta charset="utf-8">
     <!-- 指定以IE8的方式来渲染 -->
     <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8"/>
@@ -24,7 +24,7 @@
 </head>
 <body>
 <!-- 数据显示table -->
-<div id="tablePanel" class="easyui-panel" data-options="fit:true" style="padding:5px;" title="其它出库列表" iconCls="icon-list">
+<div id="tablePanel" class="easyui-panel" data-options="fit:true" style="padding:5px;" title="领料出库列表" iconCls="icon-list">
     <div class="box-body form-inline">
         <div class="form-group">
             <label class="control-label">单据编号：</label>
@@ -196,9 +196,9 @@
         $("#tablePanel").panel({width:webW-2});
         var cusUrl = "/supplier/findBySelect_cus?UBType=UserCustomer&UBKeyId=" + kid; //客户接口
         listType = "出库";
-        listSubType = "其它";
+        listSubType = "领料";
         organUrl = cusUrl;
-        amountNum = "QTCK";
+        amountNum = "LLCK";
     }
     //初始化表格数据
     function initTableData(){
@@ -549,9 +549,9 @@
                 },
                 { title: '名称', field: 'name', editor: 'validatebox', width: 100},
                 { title: '规格', field: 'standard', editor: 'validatebox', width: 60},
-                { title: '型号', field: 'model', editor: 'validatebox', width: 60},
+                { title: '型号', field: 'model', editor: 'validatebox', width: 80},
                 { title: '扩展信息', field: 'materialOther', editor: 'validatebox', width: 70},
-                { title: '库存',field: 'Stock',editor:'validatebox',width:50},
+                { title: '库存',field: 'Stock',editor:'validatebox',width:60},
                 { title: '单位',field: 'Unit',editor:'validatebox',width:60},
                 { title: '数量',field: 'OperNumber',editor:'validatebox',width:60},
                 { title: '单价',field: 'UnitPrice',editor:'validatebox',width:60},
@@ -653,9 +653,9 @@
                 { title: '条码',field: 'barCode', editor:'validatebox', width:120},
                 { title: '名称', field: 'name', editor: 'validatebox', width: 100},
                 { title: '规格', field: 'standard', editor: 'validatebox', width: 60},
-                { title: '型号', field: 'model', editor: 'validatebox', width: 60},
+                { title: '型号', field: 'model', editor: 'validatebox', width: 80},
                 { title: '扩展信息', field: 'materialOther', editor: 'validatebox', width: 70},
-                { title: '库存',field: 'Stock',width:50},
+                { title: '库存',field: 'Stock',width:60},
                 { title: '单位',field: 'Unit',editor:'validatebox',width:60},
                 { title: '数量',field: 'OperNumber',editor:'validatebox',width:60},
                 { title: '单价',field: 'UnitPrice',editor:'validatebox',width:60},
